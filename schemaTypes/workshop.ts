@@ -27,15 +27,29 @@ export default defineType({
       type: "string",
     }),
 
-    // defineField({
-    //   name: "students",
-    //   type: "number",
-    // }),
+        defineField({
+      name: "category",
+      title: "Category",
+      type: "string",
+    }),
+    
+    defineField({
+      name: "idealFor",
+      title: "Ideal For",
+      type: "string",
+    }),
 
-    // defineField({
-    //   name: "rating",
-    //   type: "number",
-    // }),
+    defineField({
+      name: "priceNote",
+      title: "Price Note",
+      type: "string",
+    }),
+
+    defineField({
+      name: "content",
+      type: "array",
+      of: [{ type: "string" }],
+    }),
 
     defineField({
       name: "originalPrice",

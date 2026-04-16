@@ -18,7 +18,25 @@ export default defineType({
       title: "Description",
       type: "text",
     }),
+
+    defineField({
+      name: "category",
+      title: "Category",
+      type: "string",
+    }),
     
+    defineField({
+      name: "idealFor",
+      title: "Ideal For",
+      type: "string",
+    }),
+
+    defineField({
+      name: "priceNote",
+      title: "Price Note",
+      type: "string",
+    }),
+
     defineField({
       name: "instructor",
       title: "Instructor",
@@ -29,6 +47,12 @@ export default defineType({
       name: "duration",
       title: "Duration",
       type: "string",
+    }),
+
+    defineField({
+      name: "content",
+      type: "array",
+      of: [{ type: "string" }],
     }),
 
     defineField({
