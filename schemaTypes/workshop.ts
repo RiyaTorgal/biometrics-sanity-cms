@@ -18,6 +18,12 @@ export default defineType({
     }),
 
     defineField({
+      name: "date",
+      title: "Date",
+      type: "date",
+    }),
+
+    defineField({
       name: "instructor",
       type: "string",
     }),
