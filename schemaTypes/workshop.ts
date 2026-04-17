@@ -58,6 +58,15 @@ export default defineType({
     }),
 
     defineField({
+      name: "mode",
+      title: "Mode",
+      type: "string",
+      options: {
+        list: ["Online", "Offline", "Hybrid"],
+      },
+    }),
+
+    defineField({
       name: "originalPrice",
       type: "string",
     }),
