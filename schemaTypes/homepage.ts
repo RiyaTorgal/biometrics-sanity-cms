@@ -23,6 +23,17 @@ export default defineType({
       type: "image",
       options: { hotspot: true },
     }),
+    defineField({
+      name: "heroImageMobile",
+      title: "Hero Image (Mobile)",
+      type: "image",
+      options: { hotspot: true },
+    }),
+    defineField({
+      name: "heroTagline",
+      title: "Hero Tagline",
+      type: "string",
+    }),
 
     // ABOUT
     defineField({
@@ -50,10 +61,43 @@ export default defineType({
       title: "About Body 2",
       type: "text",
     }),
+
+    // ✅ SERVICES SECTION (NEW)
     defineField({
-      name: "heroTagline",
-      title: "Hero Tagline",
-      type: "string",
+      name: "services",
+      title: "Services Section",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            defineField({
+              name: "title",
+              title: "Title",
+              type: "string",
+            }),
+            defineField({
+              name: "description",
+              title: "Description",
+              type: "text",
+            }),
+            defineField({
+              name: "icon",
+              title: "Icon",
+              type: "image",
+              options: { hotspot: true },
+              description:
+                "Upload an SVG or PNG icon (recommended: 64x64, transparent background)",
+            }),
+          ],
+          preview: {
+            select: {
+              title: "title",
+              media: "icon",
+            },
+          },
+        },
+      ],
     }),
 
     // LEADERSHIP
